@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.slider{
+    width:100%;
+    overflow:hidden;
+    padding:20px 0;
+    background:#f5f5f5;
+}
+
+.track{
+    display:flex;
+    width:5000px;
+    gap:20px;
+
+    animation: scroll 30s linear infinite;
+}
+
+.card{
+    width:200px;
+    height:120px;
+    background:tomato;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+    border-radius:10px;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(calc(-50%));
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="slider">
+    <div class="track">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+
+        <!-- Duplicate -->
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+    </div>
+</div>
+</body>
+</html>

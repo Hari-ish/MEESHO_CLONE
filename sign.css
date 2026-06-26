@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(rgb(253, 233, 242) 0%, rgb(253, 240, 232) 100%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  height: 70px;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(159, 32, 137, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav > img {
+  width: 130px;
+  flex-shrink: 0;
+  object-fit: contain;
+  height: 44px;
+}
+
+.search-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  background: #f8f0f8;
+  border: 1.5px solid #e8cce8;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 44px;
+  transition: border-color 0.2s;
+}
+
+.search-container:focus-within {
+  border-color: rgb(159, 32, 137);
+}
+
+.search-container input.search {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.search-container input.search::placeholder {
+  color: #bba8bb;
+}
+
+.search-container .search:last-child {
+  width: 44px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(159, 32, 137);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-container .search:last-child i {
+  color: white !important;
+  font-size: 14px;
+}
+
+.nav span {
+  font-size: 13px;
+  color: #444;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav span a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav span a:hover {
+  color: rgb(159, 32, 137);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px 40px;
+}
+
+.form-page {
+  background: white;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(159, 32, 137, 0.13);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-page > img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.form-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-page h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.country {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #aaa;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.phone-row {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #e0cce0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.phone-row:focus-within {
+  border-color: rgb(159, 32, 137);
+}
+
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: #f8f0f8;
+  border-right: 1.5px solid #e0cce0;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(159, 32, 137);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.phone-row input[type="number"] {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 13px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222;
+  background: white;
+}
+
+.phone-row input[type="number"]::placeholder {
+  color: #c0b0c0;
+  font-size: 13px;
+}
+
+.phone-row input[type="number"]::-webkit-inner-spin-button,
+.phone-row input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-page button {
+  display: block;
+  width: 100%;
+  height: 46px;
+  background: rgb(159, 32, 137);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.2s, transform 0.1s;
+  margin-bottom: 18px;
+}
+
+.form-page button:hover  { 
+  background: rgb(135, 20, 115); 
+}
+.form-page button:active { 
+  transform: scale(0.98); 
+}
+
+.terms {
+  text-align: center;
+  line-height: 1.7;
+  margin-top: auto;   
+  padding-top: 4px;
+}
+
+.terms p {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0;
+}
+
+.terms .grey {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.terms-link {
+  font-size: 11px;
+  color: rgb(159, 32, 137);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .nav span  { 
+    font-size: 12px; 
+  }
+  .nav > img {
+     width: 120px; 
+    }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .nav > img{ 
+    width: 110px; 
+    height: 36px; 
+  }
+  .nav span{ 
+    font-size: 12px;
+     margin-left: auto;
+     }
+  .nav span + span { 
+    margin-left: 0; 
+  }
+
+  .search-container {
+    order: 3;
+    width: 100%;
+    min-width: 100%;
+    height: 42px;
+  }
+
+  .form { 
+    padding: 20px 16px 32px; 
+  }
+  .form-body { 
+    padding: 20px 20px 24px; 
+  }
+
+  .phone-row input[type="number"] { 
+    padding: 12px; 
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .nav{ 
+    padding: 8px 12px; gap: 6px; 
+  }
+  .nav > img{ 
+    width: 90px;
+     height: 30px;
+     }
+  .nav span{
+     font-size: 11px;
+     }
+  .search-container{ 
+    height: 40px; 
+  }
+  .search-container input.search { 
+    font-size: 12px; 
+    padding: 0 10px;
+   }
+
+  .form {
+     padding: 14px 10px 24px;
+     }
+  .form-page{ 
+    border-radius: 12px; 
+  }
+  .form-page > img { 
+    height: 180px; 
+  }
+
+  .form-page h3  { 
+    font-size: 18px; 
+    margin-bottom: 14px;
+   }
+  .form-body{ 
+    padding: 18px 16px 20px; 
+  }
+
+  .phone-prefix  {
+     padding: 0 10px; 
+     font-size: 12px; 
+    }
+  .phone-row input[type="number"] { 
+    padding: 11px 10px; 
+    font-size: 13px; 
+  }
+  .phone-row input[type="number"]::placeholder { 
+    font-size: 12px; 
+  }
+  .form-page button { 
+    height: 42px; 
+    font-size: 14px;
+   }
+  .terms p, .terms .grey, .terms-link { 
+    font-size: 10px; 
+  }
+}
+
+@media (max-width: 360px) {
+  .nav > img { 
+    width: 80px; 
+    height: 28px; 
+  }
+  .nav span  { 
+    font-size: 10px; 
+  }
+
+  .search-container  { 
+    height: 38px; 
+  }
+  .form-page > img { 
+    height: 150px; 
+  }
+  .form-page h3
+  { font-size: 16px;
+   }
+  .form-body{ 
+    padding: 14px 12px 16px; 
+  }
+  .phone-prefix{ 
+    padding: 0 8px; 
+    font-size: 11px; }
+  .phone-row input[type="number"] { 
+    padding: 10px 8px; 
+    font-size: 12px; 
+  }
+  .form-page button  { 
+    height: 40px; 
+    font-size: 13px; 
+  }
+  .terms p, .terms .grey, .terms-link { 
+    font-size: 10px; 
+  }
+}

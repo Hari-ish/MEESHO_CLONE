@@ -1,0 +1,7 @@
+things to tell in the project presentation:
+1)!important
+2)cursor:pointer
+3)hardcore units of css
+4)clamp(MIN, IDEAL, MAX)
+5)image rendering
+6)scrollbar-width
